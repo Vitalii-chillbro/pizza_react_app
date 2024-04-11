@@ -37,11 +37,9 @@ const Button = ({ children, disabled, to, type, onClick }) => {
         )
 
     return (
-        <>
-            <button disabled={disabled} className={styles[type]}>
-                {children}
-            </button>
-        </>
+        <button disabled={disabled} className={styles[type]}>
+            {children}
+        </button>
     )
 }
 

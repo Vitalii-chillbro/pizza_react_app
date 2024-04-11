@@ -21,7 +21,6 @@ const Input = ({
     return (
         <>
             <input
-                value={value}
                 type={type}
                 onChange={onChange}
                 className={inputClassName}

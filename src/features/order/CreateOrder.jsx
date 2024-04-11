@@ -30,7 +30,7 @@ const CreateOrder = () => {
     const navigation = useNavigation()
     const isSubmitting = navigation.state === 'submitting'
 
-    const fromErrors = useActionData()
+    const formErrors = useActionData()
     const dispatch = useDispatch()
 
     const cart = useSelector(getCart)
@@ -67,12 +67,12 @@ const CreateOrder = () => {
                     <label className="sm:basis-40">Phone number</label>
                     <div className="grow">
                         <Input type="tel" name="phone" required fullWidth />
-                        {fromErrors?.phone && (
+                        {formErrors?.phone && (
                             <p
                                 className="mt-2 rounded-md bg-red-100 px-3 py-2 
                             text-xs text-red-700"
                             >
-                                {fromErrors.phone}
+                                {formErrors.phone}
                             </p>
                         )}
                     </div>
